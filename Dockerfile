@@ -1,5 +1,3 @@
-FROM ubuntu:16.04
+FROM java:openjdk-8
 
-RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk
-RUN apt-get install -y ffmpeg
+RUN apt-get update && apt-get install --yes ffmpeg && rm -rf /var/lib/apt/lists/*
